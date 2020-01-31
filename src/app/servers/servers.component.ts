@@ -18,6 +18,9 @@ selector: 'app-servers',
 export class ServersComponent implements OnInit {
   allowNewServer=false;
   serverCreationStatus='No server was created';
+  serverName='TestServer';
+
+
   constructor() { 
 
     setTimeout(()=>{
@@ -31,6 +34,11 @@ export class ServersComponent implements OnInit {
 
     onCreateServer(){
       this.serverCreationStatus='server was created..';
+    }
+    onUpdateServerName(event:Event){
+this.serverName=(<HTMLInputElement>event.target).value;
+//this.serverName=(<HTMLInputElement>event.target).value; tells type script that event target is of type htmlinputelement
+
     }
 }
  
