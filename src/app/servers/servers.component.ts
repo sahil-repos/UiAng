@@ -17,6 +17,7 @@ selector: 'app-servers',
 })
 export class ServersComponent implements OnInit {
   allowNewServer=false;
+  serverCreationStatus='No server was created';
   constructor() { 
 
     setTimeout(()=>{
@@ -27,5 +28,9 @@ export class ServersComponent implements OnInit {
   ngOnInit() {
   }
 
+
+    onCreateServer(){
+      this.serverCreationStatus='server was created..';
+    }
 }
  
