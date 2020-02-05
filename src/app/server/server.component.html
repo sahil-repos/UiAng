@@ -1,1 +1,2 @@
-<p> Server  with Id:{{serverId}}   is  {{getServerStatus()}}    </p>
+<!-- [] indicates binding some prop on the driective ngStyle, the bind prop expects to get a js object. ngStyle is an attribute directive-->
+<p [ngStyle]="{backgroundColor:getColor()}"> {{'server'}}  with Id:{{serverId}}   is  {{getServerStatus()}}    </p>
