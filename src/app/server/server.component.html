@@ -1,2 +1,8 @@
 <!-- [] indicates binding some prop on the driective ngStyle, the bind prop expects to get a js object. ngStyle is an attribute directive-->
-<p [ngStyle]="{backgroundColor:getColor()}"> {{'server'}}  with Id:{{serverId}}   is  {{getServerStatus()}}    </p>
+
+<!-- NgClass allows us to dynamically add/remove css classes
+        adding css class online if condition is true-->
+<p [ngStyle]="{backgroundColor:getColor()}"
+[ngClass]="{online:serverStatus=='online'}">
+     {{'server'}}  with Id:{{serverId}}   is  {{getServerStatus()}}   
+     </p>
